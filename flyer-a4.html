@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<!-- Copyright 2020 seatd ltd. -->
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>A4 seat flyer</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body class="home-page">
+
+
+<div id="seatd-flyer" class="seatd-flyer seatd-flyer--a4" data-size="A4">
+
+  <span class="heading top-heading">Order from your table on</span>
+
+  <img id="logo" class="logo" alt="seatd logo">
+
+  <div id="qr-holder" class="qr-holder"></div>
+
+  <span class="heading bottom-heading">Scan the QR code above to order</span>
+  <span class="sub-heading bottom-subheading">or visit</span>
+
+  <span id="venue-link" class="venue-link">dolphin.seatd.app</span>
+
+  <div class="table-number">
+    <span class="table-number__placeholder">Table Number</span>
+  </div>
+
+</div>
+
+</body>
+
+<script type="text/javascript">
+
+document.addEventListener('DOMContentLoaded', function(event) {
+  function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  var flyer = document.getElementById("seatd-flyer");
+  var venueLink = document.getElementById("venue-link");
+  var logo = document.getElementById("logo");
+
+
+  var flyerTheme = getParameterByName('theme');
+  var venueName = getParameterByName('venueName');
+
+
+  flyer.classList.add(flyerTheme);
+  logo.classList.add("logo--" + flyerTheme);
+  venueLink.innerHTML = venueName + ".seatd.app";
+})
+  
+</script>
+
+</html>

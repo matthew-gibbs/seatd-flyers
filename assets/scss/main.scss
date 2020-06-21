@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+@import "variables";
+/*Import Work Sans*/
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap');
+
+body {
+  font-family: $font-family-base;
+}
+
+
+.seatd-flyer {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &--a4 {
+    width: 21cm;
+    height: 29.7cm;
+  }
+
+  &--a5 {
+    width: 10cm;
+    height: 21cm;
+  }
+
+  // Themes
+
+  &.dark {
+    background-color: $brand-dark-purple;
+    color: $white;
+
+    .venue-link {
+      color: yellow;
+    }
+  }
+
+  &.orange {
+    background-color: $brand-light-orange;
+    color: $brand-dark-orange;
+
+    .venue-link {
+      color: $brand-dark-orange;
+    }
+  }
+
+  &.blue {
+    background-color: $brand-light-blue;
+    color: $brand-dark-blue;
+
+    .venue-link {
+      color: $brand-dark-blue;
+    }
+  }
+
+  &.purple {
+    background-color: $brand-light-purple;
+    color: $brand-dark-purple;
+
+    .venue-link {
+      color: $brand-dark-purple;
+    }
+  }
+
+  &.green {
+    background-color: $brand-light-green;
+    color: $brand-dark-green;
+
+    .venue-link {
+      color: $brand-dark-green;
+    }
+  }
+}
+
+// QR Code Holder
+
+.qr-holder {
+  width: 12cm; 
+  height: 12cm;
+  background-color: $white;
+  border-radius: 10px;
+}
+
+//Typography 
+
+.heading,
+.venue-link {
+  font-size: 1cm;
+}
+
+.bottom-heading {
+  margin: 3rem 0 1rem;
+}
+
+.logo {
+  width: 10cm;
+  height: auto;
+}
+
+.sub-heading {
+  font-size: 0.5cm;
+}
+
+//Link 
+.venue-link {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-decoration: underline;
+}
+
+// Table Number 
+.table-number {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $white;
+  color: $black;
+  padding: 1.5rem 6rem;
+  border-radius: 10px 10px 0 0;
+
+  &__placeholder {
+    opacity: 0.15;
+    font-size: 0.75cm;
+    letter-spacing: -0.5px;
+  }
+}
+
+//CSS 
+
+.logo {
+  &--dark {
+    content:url("assets/images/logo--on-dark.svg");
+  }
+
+  &--orange {
+    content:url("assets/images/logo--on-orange.svg");
+  }
+
+  &--blue {
+    content:url("assets/images/logo--on-blue.svg");
+  }
+
+  &--purple {
+    content:url("assets/images/logo--on-purple.svg");
+  }
+
+  &--green {
+    content:url("assets/images/logo--on-teal.svg");
+  }
+}
