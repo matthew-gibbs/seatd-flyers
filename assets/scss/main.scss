@@ -22,11 +22,63 @@ body {
   &--a4 {
     width: 21cm;
     height: 29.7cm;
+
+    .heading,
+    .venue-link {
+      font-size: 1cm;
+    }
+
+    .qr-holder {
+      width: 12cm; 
+      height: 12cm;
+    }
+
+    .logo {
+      width: 10cm;
+    }
+
+    .table-number {
+      padding: 1.5rem 6rem;
+
+      &__placeholder {
+        font-size: 0.75cm;
+      }
+    }
+
+    .sub-heading {
+      font-size: 0.5cm;
+    }
   }
 
   &--a5 {
-    width: 10cm;
+    width: 14.8cm;
     height: 21cm;
+
+    .heading,
+    .venue-link {
+      font-size: 0.5cm;
+    }
+
+    .qr-holder {
+      width: 8cm; 
+      height: 8cm;
+    }
+
+    .logo {
+      width: 8cm;
+    }
+
+    .table-number {
+      padding: 1rem 3rem;
+
+      &__placeholder {
+        font-size: 0.5cm;
+      }
+    }
+
+    .sub-heading {
+      font-size: 0.4cm;
+    }
   }
 
   // Themes
@@ -80,30 +132,18 @@ body {
 // QR Code Holder
 
 .qr-holder {
-  width: 12cm; 
-  height: 12cm;
   background-color: $white;
   border-radius: 10px;
 }
 
 //Typography 
 
-.heading,
-.venue-link {
-  font-size: 1cm;
-}
-
 .bottom-heading {
   margin: 3rem 0 1rem;
 }
 
 .logo {
-  width: 10cm;
   height: auto;
-}
-
-.sub-heading {
-  font-size: 0.5cm;
 }
 
 //Link 
@@ -121,12 +161,10 @@ body {
   transform: translateX(-50%);
   background-color: $white;
   color: $black;
-  padding: 1.5rem 6rem;
   border-radius: 10px 10px 0 0;
 
   &__placeholder {
     opacity: 0.15;
-    font-size: 0.75cm;
     letter-spacing: -0.5px;
   }
 }
