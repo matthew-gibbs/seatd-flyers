@@ -127,6 +127,15 @@ body {
       color: $brand-dark-green;
     }
   }
+
+  &.pink {
+    background-color: $brand-light-pink;
+    color: $brand-dark-pink;
+
+    .venue-link {
+      color: $brand-dark-pink;
+    }
+  }
 }
 
 // QR Code Holder
@@ -190,5 +199,9 @@ body {
 
   &--green {
     content:url("assets/images/logo--on-teal.svg");
+  }
+
+  &--pink {
+    content:url("assets/images/logo--on-pink.svg");
   }
 }
